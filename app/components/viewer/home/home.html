@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="app-page-container viewer-container">
+        <div class="search-container">
+            <input type="text" class="form-control" placeholder="Search by movie name" ng-model="searchValue" />
+            <button type="button" class="btn btn-primary" ng-click="getMedia(searchValue)">Search</button>
+        </div>
+        <div class="row">
+            <div class="viewer-home-list-comtainer martop20">
+                <div class="viewer-tails-container">
+                    <a class="video-grid-container">
+                        <div class="imgthumbline" ng-click="goTo('viewer.play')"
+                            style="background-image: url({{ media.Poster }});">
+                            <span class="thumbline-overlay"></span>
+                        </div>
+                        <div class="video-griddetails-container" ng-click="goTo('viewer.play')">
+
+                            <label class="channel-view">{{media.Production}}</label>
+                            <h4>{{ media.Title }}</h4>
+                            <p>{{ media.Plot }} </p>
+                        </div>
+                        <div class="video-footercontainer">
+                            <label class="datet list-page">
+                                {{ media.Year }}
+                            </label>
+                            <span>|</span>
+                            <span class="homeviewer">Director: {{ media.Director }}</span>
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
